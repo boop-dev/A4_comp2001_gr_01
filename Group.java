@@ -4,7 +4,7 @@ import java.util.stream.Collectors;
  * Simulates a group with four teams.
  *
  * @author Chiaha Christopher Izuchukwu
- * @version 2021.03.29
+ * @version 2022.03.29
  */
 public class Group
 {
