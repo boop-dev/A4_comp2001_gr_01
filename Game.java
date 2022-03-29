@@ -3,7 +3,7 @@ import java.util.Random;
  * This class simulates a match between two teams.
  *
  * @author Chiaha Christopher Izuchukwu
- * @version 2021.03.29
+ * @version 2022.03.29
  */
 public class Game
 {
