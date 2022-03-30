@@ -22,11 +22,17 @@ public class Group
         this.teams.add(thirdTeam);
         this.teams.add(fourthTeam);
     }
-
+    
+    public ArrayList<Team> getGroupList() {
+        return this.teams;
+    }
+    
     public String getName()
     {
         return this.name;
     }
     
-    
+    public void showGroupRanking(String name) {
+        
+    }
 }
