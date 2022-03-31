@@ -9,17 +9,21 @@ import java.util.stream.Collectors;
 public class Group
 {
     private String name;
+    private int groupNumber;
+    private ArrayList<String> groupResults;
     private ArrayList<Team> teams;
+
     /**
      * Constructor for objects of class Group
      */
-    public Group(String name,Team firstTeam, Team secondTeam, Team thirdTeam, Team fourthTeam) {
+    public Group(String name,Team firstTeam, Team secondTeam, Team thirdTeam, Team fourthTeam, int groupNo) {
         this.name = name;
         this.teams = new ArrayList<Team>();
         this.teams.add(firstTeam);
         this.teams.add(secondTeam);
         this.teams.add(thirdTeam);
         this.teams.add(fourthTeam);
+        this.groupNumber = groupNo;
     }
 
     public ArrayList<Team> calculateRanking()
@@ -52,6 +56,10 @@ public class Group
 
     public ArrayList<Team> teams() {
         return this.teams;
+    }
+
+    public int getGroupNumber(){
+        return groupNumber;
     }
 
 }

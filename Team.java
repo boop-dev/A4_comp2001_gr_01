@@ -14,6 +14,8 @@ public class Team
     private int totalGoalsScored;
     private int rank;
     private int goalDifference;
+    private ArrayList<String> matchesPlayed;
+
     /**
      * Constructor for objects of class Team
      */
@@ -23,6 +25,7 @@ public class Team
         totalPoints = 0;
         totalGoalsScored = 0;
         goalDifference = 0;
+        matchesPlayed = new ArrayList<String>();
     }
     
     public String getName()
@@ -72,6 +75,10 @@ public class Team
 
     public void setGoalDifference(int value){
         goalDifference += value;
+    }
+
+    public void updateMatchesPlayed(Team t1, Team t2){
+        matchesPlayed.add(t1.getName() + "vs" + t2.getName());
     }
 
 }
