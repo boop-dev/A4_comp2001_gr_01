@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Simulates the fifa world cup
  *
- * @author Chiaha Christopher Izuchukwu
+ * @author Chiaha Christopher Izuchukwu, Keagan Crane
  * @version 2022.03.30
  */
 public class FifaWorldCup
@@ -24,7 +24,7 @@ public class FifaWorldCup
     public void showResultsOfDay(int dayNumber) {
         // for every game in that day print scores
         gamesPlayed.forEach(game -> {
-            System.out.println(game);
+            System.out.println(game.toString());
         });
     }
     
