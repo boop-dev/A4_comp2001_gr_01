@@ -11,6 +11,9 @@ public class Game
     private Team secondTeam;
     private Team winner;
     private int dayNumber;
+    private int team1goals;
+    private int team2goals;
+    
     /**
      * Constructor for objects of class Game
      */
@@ -27,6 +30,9 @@ public class Game
         int y = secondTeam.computeGoals();
         firstTeam.setGoalDifference(x-y);
         secondTeam.setGoalDifference(y-x);
+        team1goals = x;
+        team2goals = y;
+        
         if (x > y){
             firstTeam.addPoints(3);
             winner = firstTeam;
@@ -55,6 +61,26 @@ public class Game
 
     public Team getWinner(){
         return winner;
+    }
+    
+    public int getTeam1Goals() {
+        return team1goals;
+    }
+    
+    public int getTeam2Goals() {
+        return team2goals;
+    }
+    
+    public Team getFirstTeam() {
+        return firstTeam;
+    }
+    
+    public Team getSecondTeam() {
+        return secondTeam;
+    }
+    
+    public int getDayNumber() {
+        return dayNumber;
     }
 }
 

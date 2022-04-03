@@ -9,9 +9,11 @@ import java.util.ArrayList;
 public class FifaWorldCup
 {
     private ArrayList<Team> teamsList;
+    private ArrayList<Game> gamesPlayed;
 
     public FifaWorldCup() {
         teamsList = new ArrayList<Team>();
+        gamesPlayed = new ArrayList<Game>();
         setUpTeams();
     }
 
@@ -21,6 +23,9 @@ public class FifaWorldCup
     
     public void showResultsOfDay(int dayNumber) {
         // for every game in that day print scores
+        gamesPlayed.forEach(game -> {
+            System.out.println(game);
+        });
     }
     
     public void showGroupRanking(int groupNumber) {
@@ -131,6 +136,14 @@ public class FifaWorldCup
         game4.playMatch();
         game5.playMatch();
         game6.playMatch();
+        
+        gamesPlayed.add(game1);
+        gamesPlayed.add(game2);
+        gamesPlayed.add(game3);
+        gamesPlayed.add(game4);
+        gamesPlayed.add(game5);
+        gamesPlayed.add(game6);
+        
 
         return group.calculateRanking();
     }
@@ -138,6 +151,7 @@ public class FifaWorldCup
     public Team knockoutStageSim(ArrayList<Team> groupStageWinners, int x){
         Game oneVsOne = new Game(groupStageWinners.get(0), groupStageWinners.get(1), x);
         oneVsOne.playMatch();
+        gamesPlayed.add(oneVsOne);
         return oneVsOne.getWinner();
     }
 }
