@@ -24,8 +24,9 @@ public class FifaWorldCup
     public void showResultsOfDay(int dayNumber) {
         // for every game in that day print scores
         gamesPlayed.forEach(game -> {
-            System.out.println(game.toString());
+            System.out.println(game.getFirstTeam().getName() + game.getTeam1Goals());
         });
+        
     }
     
     public void showGroupRanking(int groupNumber) {
