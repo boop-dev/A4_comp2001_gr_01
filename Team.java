@@ -80,5 +80,8 @@ public class Team
     public void updateMatchesPlayed(Team t1, Team t2){
         matchesPlayed.add(t1.getName() + "vs" + t2.getName());
     }
-
+    
+    public ArrayList<String> getMatchesPlayed() {
+        return matchesPlayed;
+    }
 }

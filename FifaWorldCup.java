@@ -34,15 +34,24 @@ public class FifaWorldCup
     }
     
     public void showTeamMatches(String teamName) {
-        // ever
+        //prints day and score of all matches played by a team
+        for (Team team : teamsList) {
+            if (team.getName() == teamName) {
+                for (String match : team.getMatchesPlayed()) {
+                    System.out.println(match);
+                }
+            }
+        }
     }
     
     public void showTheChampion() {
+        //prints winner of tournament
         Team winner = worldCupSimulator();
             System.out.println("Winner: " + worldCupSimulator().getName());
     }
     
      public void setUpTeams() {
+         //sets up all team names
          Team team = new Team("USA");
          teamsList.add(team);
          team = new Team("Uruguay");
@@ -79,7 +88,7 @@ public class FifaWorldCup
     }
 
     private Team worldCupSimulator(){
-
+        
         Group group1 = new Group("Group 1", this.teamsList.get(0), this.teamsList.get(1), this.teamsList.get(2), this.teamsList.get(3), 1);
         Group group2 = new Group("Group 2", this.teamsList.get(4), this.teamsList.get(5), this.teamsList.get(6), this.teamsList.get(7), 2);
         Group group3 = new Group("Group 3", this.teamsList.get(8), this.teamsList.get(9), this.teamsList.get(10), this.teamsList.get(11), 3);
