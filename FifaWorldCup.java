@@ -138,6 +138,14 @@ public class FifaWorldCup
         game5.playMatch();
         game6.playMatch();
         
+        matchUpdater(game1);
+        matchUpdater(game2);
+        matchUpdater(game3);
+        matchUpdater(game4);
+        matchUpdater(game5);
+        matchUpdater(game6);
+        
+        
         gamesPlayed.add(game1);
         gamesPlayed.add(game2);
         gamesPlayed.add(game3);
@@ -153,7 +161,14 @@ public class FifaWorldCup
         Game oneVsOne = new Game(groupStageWinners.get(0), groupStageWinners.get(1), x);
         oneVsOne.playMatch();
         gamesPlayed.add(oneVsOne);
+        matchUpdater(oneVsOne);
         return oneVsOne.getWinner();
     }
+    
+    public void matchUpdater(Game game) {
+        game.getFirstTeam().updateMatchesPlayed(game.getFirstTeam(), game.getSecondTeam());
+        game.getSecondTeam().updateMatchesPlayed(game.getFirstTeam(), game.getSecondTeam());
+    }
+    
 }
 
