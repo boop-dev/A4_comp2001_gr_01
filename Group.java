@@ -57,6 +57,10 @@ public class Group
     public ArrayList<Team> teams() {
         return this.teams;
     }
+    
+    public updateGroupResults(String result){
+        groupResults.add(result);
+    }    
 
     public int getGroupNumber(){
         return groupNumber;
